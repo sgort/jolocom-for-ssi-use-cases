@@ -9,7 +9,21 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("http://localhost:9000/testAPI")
+        /**
+         * original API endpoint
+         */
+        fetch("http://localhost:9001/testAPI")
+        /**
+         * Jolocom HAPI plugin Websocket with plain REST route provided
+         *
+        fetch("http://localhost:9000/foo", {
+            body: '{ "foo": 42 }',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: "POST"
+            })
+            */
             .then(res => res.text())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
@@ -26,7 +40,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <p className="App-intro">{this.state.apiResponse}</p>
+                <p className="App-intro">API backend test: {this.state.apiResponse}</p>
             </div>
         );
     }
