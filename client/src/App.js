@@ -11,20 +11,19 @@ class App extends Component {
     callAPI() {
         /**
          * original API endpoint
-         */
-        fetch("http://localhost:9001/testAPI")
+        fetch("/testAPI")
+        */
         /**
          * Jolocom HAPI plugin Websocket with plain REST route provided
-         *
-        fetch("http://localhost:9000/foo", {
-            body: '{ "foo": 42 }',
+         */
+        fetch("/foo", {
+            body: '{ "/foo": 42 }',
             headers: {
                 "Content-Type": "application/json"
             },
             method: "POST"
             })
-            */
-            .then(res => res.text())
+            .then(res => res.json())
             .then(res => this.setState({ apiResponse: res }))
             .catch(err => err);
     }
