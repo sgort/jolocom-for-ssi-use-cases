@@ -24,7 +24,7 @@ class App extends Component {
             method: "POST"
             })
             .then(res => res.json())
-            .then(res => this.setState({ apiResponse: res }))
+            .then(res => this.setState({ apiResponse: res.at }))
             .catch(err => err);
     }
 
@@ -39,7 +39,7 @@ class App extends Component {
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <p className="App-intro">API backend test: {this.state.apiResponse}</p>
+                <p className="App-intro">API backend test (expected 'foo'): {this.state.apiResponse}</p>
             </div>
         );
     }
