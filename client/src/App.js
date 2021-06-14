@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { JolocomWebServiceClient } from '@jolocom/web-service-client'
 
 class App extends Component {
     constructor(props) {
