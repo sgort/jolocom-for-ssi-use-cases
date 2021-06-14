@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { JolocomWebServiceClient } from '@jolocom/web-service-client'
-import { JolocomSDK, NaivePasswordStore } from '@jolocom/sdk'
-import { JolocomTypeormStorage } from '@jolocom/sdk-storage-typeorm'
-import { createConnection } from 'typeorm'
 
 class App extends Component {
     constructor(props) {
