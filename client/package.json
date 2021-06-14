@@ -5,6 +5,7 @@
   "proxy": "http://localhost:9000",
   "dependencies": {
     "@jolocom/sdk": "^1.2.0",
+    "@jolocom/sdk-storage-typeorm": "^4.2.0",
     "@jolocom/web-service-client": "^1.0.1",
     "jolocom-lib": "^5.2.0",
     "react": "^16.4.2",
